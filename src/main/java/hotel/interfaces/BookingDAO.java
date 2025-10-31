@@ -13,7 +13,7 @@ public interface BookingDAO {
     void cancelBooking(int bookingId) throws Exception;
 
     List<Object[]> countBookingsPerCustomer();
-    double getAverageBookedRoomPrice();
+    int getAverageBookedRoomPrice();
     List<Integer> getAvailableRoomsBetween(LocalDate start, LocalDate end);
     List<String> getCustomersWhoNeverBooked();
 }

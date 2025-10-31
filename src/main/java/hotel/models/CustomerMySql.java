@@ -15,7 +15,7 @@ public class CustomerMySql implements CustomerDAO {
 
     @Override
     public void addCustomer(Customer customer){
-        String sql = "INSERT INTO cusotmers (name, email, city) VALUES (?, ?, ?)";
+        String sql = "INSERT INTO customers (name, email, city) VALUES (?, ?, ?)";
 
         try (
             Connection connection = Connector.getConnection();
@@ -35,7 +35,7 @@ public class CustomerMySql implements CustomerDAO {
     @Override
     public List<Customer> getAllCustomers(){
         String sql = "SELECT id, name, email, city FROM customers";
-        List<Customer> list = new ArrayList<>();
+        List<Customer> customers = new ArrayList<>();
 
         try (
             Connection connection = Connector.getConnection();
@@ -43,7 +43,7 @@ public class CustomerMySql implements CustomerDAO {
             ResultSet dataSet = statement.executeQuery();
         ){
             while(dataSet.next()){
-                list.add(new Customer(
+                customers.add(new Customer(
                     dataSet.getInt("id"),
                     dataSet.getString("name"),
                     dataSet.getString("email"),
@@ -55,13 +55,13 @@ public class CustomerMySql implements CustomerDAO {
             throw new RuntimeException("Could not retrieve all customers! :C", err);
         }
 
-        return list;
+        return customers;
     };
 
 
     @Override
     public Optional<Customer> findCustomerByEmail(String email){
-        String sql = "SELECT id, name, email, city FROM customer WHERE email = ?";
+        String sql = "SELECT id, name, email, city FROM customers WHERE email = ?";
         
         try(
             Connection connection = Connector.getConnection();

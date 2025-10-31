@@ -28,6 +28,7 @@ public class Room {
         this(0, roomNumber, roomType, price, available);
     }
 
+    public int getId(){return this.id;}
     public String getRoomNumber(){return this.roomNumber;}
     public String getRoomType(){return this.roomType;}
     public int getRoomPrice(){return this.price;}
