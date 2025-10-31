@@ -102,7 +102,7 @@ public class CustomerMySql implements CustomerDAO {
         ) {
             statement.setString(1, newCity);
             statement.setString(2, email);
-            statement.executeQuery();
+            statement.executeUpdate();
             
         } catch (SQLException err) {
             throw new RuntimeException("Could not update customer's city! :C", err);

@@ -31,5 +31,11 @@ public class Booking {
     ){
         this(0,customerId,roomId,startDate,endDate);
     }
+
+    public int getCustomerId() {return this.customerId;}
+    public int getRoomId() {return this.roomId;}
+    public LocalDate getStartDate() {return this.startDate;}
+    public LocalDate getEndDate() {return this.endDate;}
+    
     
 }
