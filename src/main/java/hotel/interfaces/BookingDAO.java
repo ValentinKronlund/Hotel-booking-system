@@ -1,8 +1,10 @@
-package src.interfaces;
+package hotel.interfaces;
 
-import src.models.Booking;
 import java.time.LocalDate;
 import java.util.List;
+
+import hotel.models.Booking;
+
 
 public interface BookingDAO {
     void bookRoom(Booking booking) throws Exception;

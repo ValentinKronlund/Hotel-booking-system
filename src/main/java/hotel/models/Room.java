@@ -1,4 +1,4 @@
-package src.models;
+package hotel.models;
 
 public class Room {
     private int id;
@@ -27,4 +27,9 @@ public class Room {
     boolean available){
         this(0, roomNumber, roomType, price, available);
     }
+
+    public String getRoomNumber(){return this.roomNumber;}
+    public String getRoomType(){return this.roomType;}
+    public int getRoomPrice(){return this.price;}
+    public boolean getRoomAvailability(){return this.available;}
 }

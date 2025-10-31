@@ -1,7 +1,8 @@
-package src.interfaces;
+package hotel.interfaces;
 
-import src.models.Room;
 import java.util.List;
+
+import hotel.models.Room;
 
 public interface RoomDAO {
     void addRoom(Room room);

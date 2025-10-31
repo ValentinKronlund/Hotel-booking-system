@@ -1,8 +1,9 @@
-package src.interfaces;
+package hotel.interfaces;
 
-import src.models.Customer;
 import java.util.List;
 import java.util.Optional;
+
+import hotel.models.Customer;
 
 public interface CustomerDAO {
     void addCustomer(Customer customer);

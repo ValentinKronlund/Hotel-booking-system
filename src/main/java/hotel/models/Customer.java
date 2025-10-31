@@ -1,4 +1,4 @@
-package src.models;
+package hotel.models;
 
 public class Customer {
     private int id;
@@ -16,4 +16,8 @@ public class Customer {
     public Customer(String name, String email, String city){
         this(0, name, email, city);
     }
+
+    public String getName(){return this.name;}
+    public String getEmail(){return this.email;}
+    public String getCity(){return this.city;}
 }
